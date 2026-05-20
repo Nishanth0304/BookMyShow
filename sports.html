@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sports - BookMyShow</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+/* HEADER */
+
+header{
+    background:#1f2533;
+    padding:15px 40px;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo a{
+    color:#e71a0f;
+    font-size:32px;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.nav-links{
+    display:flex;
+    gap:20px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#e71a0f;
+}
+
+/* PAGE TITLE */
+
+.page-title{
+    text-align:center;
+    padding:40px;
+}
+
+.page-title h1{
+    color:#1f2533;
+    font-size:38px;
+}
+
+/* SPORTS */
+
+.sports{
+    padding:0 50px 50px;
+}
+
+.sports-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.sport-card{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.sport-card:hover{
+    transform:translateY(-5px);
+}
+
+.sport-card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+.sport-info{
+    padding:15px;
+}
+
+.sport-info h3{
+    margin-bottom:10px;
+}
+
+.sport-info p{
+    color:gray;
+    margin-bottom:15px;
+}
+
+.btn{
+    background:#e71a0f;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#c4170d;
+}
+
+/* FOOTER */
+
+footer{
+    background:#1f2533;
+    color:white;
+    margin-top:50px;
+    padding:40px 60px 20px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+}
+
+.footer-section{
+    width:25%;
+}
+
+.footer-section h3{
+    margin-bottom:15px;
+    color:#e71a0f;
+}
+
+.footer-section p{
+    line-height:1.8;
+    color:#d1d1d1;
+}
+
+.footer-section ul{
+    list-style:none;
+}
+
+.footer-section ul li{
+    margin-bottom:10px;
+}
+
+.footer-section ul li a{
+    text-decoration:none;
+    color:#d1d1d1;
+}
+
+.footer-section ul li a:hover{
+    color:white;
+}
+
+.footer-section p a{
+    text-decoration:none;
+    color:#bbb;
+}
+
+.footer-section p a:hover{
+    color:white;
+}
+
+hr{
+    margin:30px 0 15px;
+    border:0.5px solid gray;
+}
+
+.footer-bottom{
+    text-align:center;
+    color:#bbb;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablet */
+@media(max-width:992px){
+
+    header{
+        padding:15px 20px;
+    }
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .sports-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-container{
+        flex-wrap:wrap;
+    }
+
+    .footer-section{
+        width:45%;
+    }
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+    .logo a{
+        font-size:28px;
+    }
+
+    .nav-links{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:12px;
+    }
+
+    .page-title h1{
+        font-size:30px;
+    }
+
+    .sports{
+        padding:0 20px 30px;
+    }
+
+    .sports-grid{
+        grid-template-columns:1fr;
+    }
+
+    .sport-card img{
+        height:250px;
+    }
+
+    .sport-info{
+        text-align:center;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    footer{
+        padding:30px 20px;
+    }
+
+    .footer-container{
+        flex-direction:column;
+    }
+
+    .footer-section{
+        width:100%;
+        text-align:center;
+    }
+}
+
+/* Small Mobile */
+@media(max-width:480px){
+
+    .logo a{
+        font-size:24px;
+    }
+
+    .nav-links{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .page-title h1{
+        font-size:24px;
+    }
+
+    .sport-card img{
+        height:220px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="navbar">
+
+        <div class="logo">
+            <a href="index.html">BookMyShow</a>
+        </div>
+
+        <div class="nav-links">
+            <a href="bookmyshow.html">Home</a>
+            <a href="movies.html">Movies</a>
+            <a href="events.html">Events</a>
+            <a href="sports.html">Sports</a>
+            <a href="offers.html">Offers</a>
+            <a href="signin.html">Sign In</a>
+        </div>
+
+    </div>
+
+</header>
+
+<section class="page-title">
+    <h1>Sports Events</h1>
+</section>
+
+<section class="sports">
+
+<div class="sports-grid">
+
+    <div class="sport-card">
+        <img src="events/sports1.webp">
+        <div class="sport-info">
+            <h3>IPL Cricket</h3>
+            <p>Watch live cricket action</p>
+            <button class="btn">Book Ticket</button>
+        </div>
+    </div>
+
+    <div class="sport-card">
+        <img src="events/sports2.webp">
+        <div class="sport-info">
+            <h3>Football League</h3>
+            <p>Exciting football matches</p>
+            <button class="btn">Book Ticket</button>
+        </div>
+    </div>
+
+    <div class="sport-card">
+        <img src="events/sports3.webp">
+        <div class="sport-info">
+            <h3>Badminton Finals</h3>
+            <p>Top players compete live</p>
+            <button class="btn">Book Ticket</button>
+        </div>
+    </div>
+
+    <div class="sport-card">
+        <img src="events/sports4.webp">
+        <div class="sport-info">
+            <h3>Kabaddi Match</h3>
+            <p>Live Pro Kabaddi action</p>
+            <button class="btn">Book Ticket</button>
+        </div>
+    </div>
+
+    <div class="sport-card">
+        <img src="events/sports5.webp">
+        <div class="sport-info">
+            <h3>Tennis Championship</h3>
+            <p>Grand tennis competition</p>
+            <button class="btn">Book Ticket</button>
+        </div>
+    </div>
+
+    <div class="sport-card">
+        <img src="events/sports6.webp">
+        <div class="sport-info">
+            <h3>Basketball League</h3>
+            <p>Fast-paced basketball games</p>
+            <button class="btn">Book Ticket</button>
+        </div>
+    </div>
+
+    <div class="sport-card">
+        <img src="events/sports7.webp">
+        <div class="sport-info">
+            <h3>Marathon 2026</h3>
+            <p>Join the city marathon</p>
+            <button class="btn">Book Ticket</button>
+        </div>
+    </div>
+
+    <div class="sport-card">
+        <img src="events/sports8.webp">
+        <div class="sport-info">
+            <h3>Wrestling Show</h3>
+            <p>Live wrestling entertainment</p>
+            <button class="btn">Book Ticket</button>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+<footer>
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h3>BookMyShow</h3>
+            <p>
+                Book movie tickets online for latest movies,
+                sports, events, concerts and more.
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="offers.html">Offers</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="help.html">Help Center</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="terms.html">Terms & Conditions</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <p><a href="https://www.facebook.com/">Facebook</a></p>
+            <p><a href="https://www.instagram.com/">Instagram</a></p>
+            <p><a href="https://x.com/">Twitter</a></p>
+            <p><a href="https://www.youtube.com/">YouTube</a></p>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="footer-bottom">
+        <p>© 2026 BookMyShow Clone | All Rights Reserved</p>
+    </div>
+</footer>
+
+</body>
+</html>

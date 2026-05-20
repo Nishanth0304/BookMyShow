@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Offers - BookMyShow</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+/* HEADER */
+
+header{
+    background:#1f2533;
+    padding:15px 40px;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo a{
+    color:#e71a0f;
+    font-size:32px;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.nav-links{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+}
+
+/* OFFERS PAGE */
+
+.offers-page{
+    padding:50px;
+}
+
+.offers-header{
+    margin-bottom:40px;
+    text-align:center;
+}
+
+.offers-header h1{
+    font-size:40px;
+    color:#1f2533;
+    margin-bottom:10px;
+}
+
+.offers-header p{
+    color:gray;
+}
+
+.offer-container{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.offer-card{
+    background:white;
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.12);
+    border-left:8px solid #f84464;
+    transition:0.3s;
+}
+
+.offer-card:hover{
+    transform:translateY(-5px);
+}
+
+.offer-card h3{
+    color:#1f2533;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.offer-card p{
+    color:#666;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.offer-code{
+    display:inline-block;
+    background:#ffe6ea;
+    color:#f84464;
+    padding:10px 18px;
+    border-radius:8px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.btn{
+    background:#f84464;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    width:100%;
+}
+
+.btn:hover{
+    background:#d63052;
+}
+
+/* FOOTER */
+
+footer{
+    background:#1f2533;
+    color:white;
+    margin-top:50px;
+    padding:40px 60px 20px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.footer-section{
+    width:22%;
+}
+
+.footer-section h3{
+    margin-bottom:15px;
+    color:#e71a0f;
+}
+
+.footer-section ul{
+    list-style:none;
+}
+
+.footer-section ul li{
+    margin-bottom:10px;
+}
+
+.footer-section ul li a,
+.footer-section p a{
+    text-decoration:none;
+    color:#d1d1d1;
+}
+
+.footer-section ul li a:hover,
+.footer-section p a:hover{
+    color:white;
+}
+
+.footer-section p{
+    line-height:1.8;
+    color:#d1d1d1;
+}
+
+hr{
+    margin:30px 0 15px;
+    border:0.5px solid gray;
+}
+
+.footer-bottom{
+    text-align:center;
+    color:#bbb;
+}
+
+/* ===================== */
+/* RESPONSIVE DESIGN */
+/* ===================== */
+
+/* Tablet */
+@media screen and (max-width:1024px){
+
+    .offers-page{
+        padding:40px 30px;
+    }
+
+    .offer-container{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-section{
+        width:45%;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width:768px){
+
+    header{
+        padding:15px 20px;
+    }
+
+    .navbar{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .nav-links{
+        justify-content:center;
+    }
+
+    .offers-page{
+        padding:30px 20px;
+    }
+
+    .offers-header h1{
+        font-size:30px;
+    }
+
+    .offer-container{
+        grid-template-columns:1fr;
+    }
+
+    .offer-card{
+        padding:25px;
+    }
+
+    footer{
+        padding:30px 20px;
+    }
+
+    .footer-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .footer-section{
+        width:100%;
+    }
+}
+
+/* Small Mobile */
+@media screen and (max-width:480px){
+
+    .logo a{
+        font-size:26px;
+    }
+
+    .nav-links{
+        gap:12px;
+    }
+
+    .nav-links a{
+        font-size:14px;
+    }
+
+    .offers-header h1{
+        font-size:26px;
+    }
+
+    .offers-header p{
+        font-size:14px;
+    }
+
+    .offer-card{
+        padding:20px;
+    }
+
+    .offer-card h3{
+        font-size:20px;
+    }
+
+    .offer-card p{
+        font-size:14px;
+    }
+
+    .btn{
+        font-size:15px;
+        padding:10px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="navbar">
+
+        <div class="logo">
+            <a href="index.html">BookMyShow</a>
+        </div>
+
+        <div class="nav-links">
+            <a href="bookmyshow.html">Home</a>
+            <a href="movies.html">Movies</a>
+            <a href="events.html">Events</a>
+            <a href="sports.html">Sports</a>
+            <a href="offers.html">Offers</a>
+            <a href="signin.html">Sign In</a>
+        </div>
+
+    </div>
+
+</header>
+
+<section class="offers-page">
+
+    <div class="offers-header">
+        <h1>Offers for You</h1>
+        <p>View all available offers, discounts and cashback deals</p>
+    </div>
+
+    <div class="offer-container">
+
+        <div class="offer-card">
+            <h3>50% OFF up to ₹100</h3>
+            <p>Use HDFC Bank cards and get instant discount on movie tickets.</p>
+            <div class="offer-code">Code: HDFC50</div>
+            <button class="btn">Claim Offer</button>
+        </div>
+
+        <div class="offer-card">
+            <h3>Buy 1 Get 1 Free</h3>
+            <p>Book movie tickets and get one extra ticket free.</p>
+            <div class="offer-code">Code: BOGO</div>
+            <button class="btn">Claim Offer</button>
+        </div>
+
+        <div class="offer-card">
+            <h3>Flat ₹200 Cashback</h3>
+            <p>Pay using Paytm wallet and enjoy cashback instantly.</p>
+            <div class="offer-code">Code: PAY200</div>
+            <button class="btn">Claim Offer</button>
+        </div>
+
+        <div class="offer-card">
+            <h3>Weekend Movie Offer</h3>
+            <p>Flat ₹250 off on selected weekend bookings.</p>
+            <div class="offer-code">Code: WEEK250</div>
+            <button class="btn">Claim Offer</button>
+        </div>
+
+        <div class="offer-card">
+            <h3>30% OFF on Sports Tickets</h3>
+            <p>Get discount on cricket and football match tickets.</p>
+            <div class="offer-code">Code: SPORT30</div>
+            <button class="btn">Claim Offer</button>
+        </div>
+
+        <div class="offer-card">
+            <h3>Concert Cashback ₹500</h3>
+            <p>Book concert tickets and get cashback instantly.</p>
+            <div class="offer-code">Code: MUSIC500</div>
+            <button class="btn">Claim Offer</button>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h3>BookMyShow</h3>
+            <p>
+                Book movie tickets online for latest movies,
+                sports, events and concerts.
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="offers.html">Offers</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="help.html">Help Center</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="terms.html">Terms & Conditions</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <p><a href="https://www.facebook.com/">Facebook</a></p>
+            <p><a href="https://www.instagram.com/">Instagram</a></p>
+            <p><a href="https://x.com/">Twitter</a></p>
+            <p><a href="https://www.youtube.com/">YouTube</a></p>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="footer-bottom">
+        <p>© 2026 BookMyShow Clone | All Rights Reserved</p>
+    </div>
+
+</footer>
+
+</body>
+</html>
